@@ -1,0 +1,268 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+h4 {
+    color: rgb(190, 183, 183);
+    font-style: italic;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    background-color: #007bff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styles */
+.header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content Styles */
+.main-content {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Form Section Styles */
+.form-section {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+input,
+button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 200px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Table Section Styles */
+.table-section {
+    overflow-x: auto;
+    /* Allows horizontal scrolling if needed */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    min-width: 600px;
+    /* Minimum width to prevent overflow issues */
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Action buttons styling */
+.action-buttons {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    /* Allows buttons to wrap on smaller screens */
+}
+
+.edit,
+.delete {
+    cursor: pointer;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 12px;
+}
+
+.edit {
+    background-color: #007bff;
+}
+
+.edit:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.delete {
+    background-color: #dc3545;
+}
+
+.delete:hover {
+    background-color: #c82333;
+    transform: scale(1.1);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+}
+
+.main-content {
+    font: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .main-content {
+        margin: 20px;
+        padding: 10px;
+    }
+
+    form {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    table {
+        min-width: unset;
+        /* Allow the table to resize */
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    /* Adjust action buttons to be more flexible */
+    .action-buttons {
+        gap: 3px;
+        justify-content: center;
+    }
+
+    .edit,
+    .delete {
+        font-size: 10px;
+        padding: 4px 8px;
+        border-radius: 4px;
+    }
+
+
+    .footer {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    button {
+        max-width: 100%;
+        /* Allow buttons to stretch on smaller screens */
+    }
+
+    /* Table should scroll horizontally if it overflows */
+    .table-section {
+        overflow-x: auto;
+    }
+
+    th,
+    td {
+        font-size: 11px;
+        padding: 6px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        /* Stack action buttons on top of each other */
+        align-items: center;
+    }
+
+    .edit,
+    .delete {
+        padding: 4px 8px;
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+
+    .footer {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+
+}

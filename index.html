@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header">
+        <h1>Inventory Management System</h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="main-content">
+        <!-- Form Section -->
+        <section class="form-section">
+            <form id="product-form">
+                <input type="text" id="product-name" placeholder="Product Name" required>
+                <input type="number" id="product-quantity" placeholder="Quantity" required min="1">
+                <input type="number" id="product-price" placeholder="Price" required min="0.01" step="0.01">
+                <button type="submit">Add Product</button>
+            </form>
+        </section>
+
+        <!-- Table Section -->
+        <section class="table-section">
+            <table id="product-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="product-body">
+                    <!-- Products will be dynamically added here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Inventory Management System. All rights reserved. <br>
+
+        <h4>*Developer:Ali Shahid*</h4>
+        </p>
+    </footer>
+
+    <!-- Linking JavaScript -->
+    <script src="index.js"></script>
+</body>
+
+</html>
