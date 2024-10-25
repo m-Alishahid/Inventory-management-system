@@ -1,227 +1,147 @@
-/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f7fa;
-    margin: 0;
-    padding: 0;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-
-h4 {
-    color: rgb(190, 183, 183);
-    font-style: italic;
-}
-
-/* Navigation Bar Styles */
+/* Navigation Bar */
 .navbar {
     background-color: #007bff;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: center;
+    padding: 10px;
+    text-align: center;
 }
 
 .navbar ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
+    justify-content: center;
     gap: 20px;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    padding: 8px 16px;
+    display: inline-block;
+    font-size: 16px; /* Larger font for better readability */
 }
 
 .navbar a:hover {
-    text-decoration: underline;
+    background-color: #0056b3;
+    border-radius: 5px;
 }
 
-/* Header Styles */
+/* Header */
 .header {
     background-color: #007bff;
-    color: #fff;
+    color: white;
     padding: 20px;
     text-align: center;
     font-size: 24px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Main Content Styles */
+/* Main Content */
 .main-content {
-    max-width: 1000px;
-    margin: 40px auto;
+    max-width: 600px;
+    margin: 20px auto;
     padding: 20px;
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: white;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Form Section Styles */
-.form-section {
-    margin-bottom: 20px;
+.contact-form-section {
+    margin-top: 20px;
 }
 
 form {
     display: flex;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
 }
 
-input,
-button {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.form-group label {
+    font-size: 16px; /* Larger label font size */
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
     width: 100%;
-    max-width: 200px;
-    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; /* Larger input font size */
 }
 
-button {
+button[type="submit"] {
+    padding: 14px;
     background-color: #28a745;
-    color: #fff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px; /* Larger button font size */
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
-button:hover {
+button[type="submit"]:hover {
     background-color: #218838;
 }
 
-/* Table Section Styles */
-.table-section {
-    overflow-x: auto;
-    /* Allows horizontal scrolling if needed */
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    min-width: 600px;
-    /* Minimum width to prevent overflow issues */
-}
-
-th,
-td {
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
-    font-size: 14px;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-
-/* Action buttons styling */
-.action-buttons {
-    display: flex;
-    gap: 5px;
-    flex-wrap: wrap;
-    /* Allows buttons to wrap on smaller screens */
-}
-
-.edit,
-.delete {
-    cursor: pointer;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 3px;
-    color: white;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    font-size: 12px;
-}
-
-.edit {
-    background-color: #007bff;
-}
-
-.edit:hover {
-    background-color: #0056b3;
-    transform: scale(1.1);
-}
-
-.delete {
-    background-color: #dc3545;
-}
-
-.delete:hover {
-    background-color: #c82333;
-    transform: scale(1.1);
-}
-
-/* Footer Styles */
+/* Footer */
 .footer {
     background-color: #007bff;
-    color: #fff;
+    color: white;
     text-align: center;
-    padding: 10px;
-    position: relative;
-    width: 100%;
+    padding: 15px 10px;
+    font-size: 14px;
+    margin-top: auto; /* Pushes footer to the bottom */
 }
 
-.main-content {
-    font: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.footer h4 {
+    margin-top: 5px;
 }
 
-
-
-
-/* Responsive Media Queries */
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+    .header {
+        font-size: 22px;
+        padding: 15px;
+    }
+
     .navbar ul {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
+        flex-direction: column; /* Stack nav links vertically */
+    }
+
+    .navbar a {
+        font-size: 18px; /* Larger font for better readability */
     }
 
     .main-content {
-        margin: 20px;
-        padding: 10px;
+        margin: 10px;
+        padding: 15px;
     }
 
-    form {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
+    .form-group label,
+    .form-group input,
+    .form-group textarea {
+        font-size: 18px; /* Adjust font size for readability */
     }
 
-    table {
-        min-width: unset;
-        /* Allow the table to resize */
-        font-size: 12px;
+    button[type="submit"] {
+        font-size: 20px;
+        padding: 12px;
     }
-
-    th,
-    td {
-        padding: 8px;
-    }
-
-    /* Adjust action buttons to be more flexible */
-    .action-buttons {
-        gap: 3px;
-        justify-content: center;
-    }
-
-    .edit,
-    .delete {
-        font-size: 10px;
-        padding: 4px 8px;
-        border-radius: 4px;
-    }
-
-
-    .footer {
-        padding: 8px 15px;
-        font-size: 14px;
-    }
-
 }
 
 @media (max-width: 480px) {
@@ -230,39 +150,31 @@ th {
         padding: 15px;
     }
 
-    button {
-        max-width: 100%;
-        /* Allow buttons to stretch on smaller screens */
+    .navbar a {
+        padding: 10px 12px;
+        font-size: 16px;
     }
 
-    /* Table should scroll horizontally if it overflows */
-    .table-section {
-        overflow-x: auto;
+    .main-content {
+        padding: 15px;
     }
 
-    th,
-    td {
-        font-size: 11px;
-        padding: 6px;
+    .form-group label {
+        font-size: 16px; /* Slightly smaller for mobile but still readable */
     }
 
-    .action-buttons {
-        flex-direction: column;
-        /* Stack action buttons on top of each other */
-        align-items: center;
+    .form-group input,
+    .form-group textarea {
+        font-size: 16px;
     }
 
-    .edit,
-    .delete {
-        padding: 4px 8px;
-        font-size: 10px;
-        margin-bottom: 5px;
+    button[type="submit"] {
+        font-size: 18px;
+        padding: 12px;
     }
 
     .footer {
-        padding: 8px 10px;
-        font-size: 12px;
+        font-size: 14px;
+        padding: 10px;
     }
-
-
 }
